@@ -19,17 +19,13 @@ public class AreaServiceImpl implements AreaService {
     private final AreaRepository areaRepository;
 
     @Override
-    @Transactional(readOnly = true)
     public List<AreaEntity> listarTodas() {
         return areaRepository.findAll();
     }
 
     @Override
-    @Transactional(readOnly = true)
-
     public AreaEntity buscarPorId(Long id) {
-        return areaRepository.findById(id)
-                .orElseThrow(() ->
+        return areaRepository.findById(id).orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,
                                 "não encontrada"
