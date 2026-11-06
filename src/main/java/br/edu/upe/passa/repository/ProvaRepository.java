@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProvaRepository extends JpaRepository<ProvaEntity, Long> {
+public interface ProvaRepository extends JpaRepository<ProvaEntity, Integer> {
 
     List<ProvaEntity> findByAno(Integer ano);
 

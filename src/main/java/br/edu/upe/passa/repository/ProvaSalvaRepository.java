@@ -10,9 +10,9 @@ import java.util.List;
 @Repository
 public interface ProvaSalvaRepository extends JpaRepository<ProvaSalvaEntity, ProvaSalvaId> {
 
-    List<ProvaSalvaEntity> findByUsuario_IdUsuario(Long idUsuario);
+    List<ProvaSalvaEntity> findByUsuario_IdUsuario(Integer idUsuario);
 
     boolean existsByUsuario_IdUsuarioAndProva_IdProva(
-            Long idUsuario, Long idProva
+            Integer idUsuario, Integer idProva
     );
 }

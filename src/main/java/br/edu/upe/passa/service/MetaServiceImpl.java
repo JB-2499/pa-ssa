@@ -1,6 +1,6 @@
 package br.edu.upe.passa.service;
 
-import br.edu.upe.passa.entity.Area;
+import br.edu.upe.passa.entity.AreaEntity;
 import br.edu.upe.passa.entity.Meta;
 import br.edu.upe.passa.entity.Usuario;
 import br.edu.upe.passa.repository.AreaRepository;
@@ -30,7 +30,7 @@ public class MetaServiceImpl implements MetaService {
 
         Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado"));
-        Area area = areaRepository.findById(areaId)
+        AreaEntity area = areaRepository.findById(areaId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Área não encontrada"));
 
         if (metaRepository.existsByUsuarioIdAndAreaId(usuarioId, areaId)) {

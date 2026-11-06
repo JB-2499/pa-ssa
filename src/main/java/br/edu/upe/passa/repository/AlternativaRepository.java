@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface AlternativaRepository extends JpaRepository<AlternativaEntity, Long> {
+public interface AlternativaRepository extends JpaRepository<AlternativaEntity, Integer> {
 
-    List<AlternativaEntity> findByQuestao_IdQuestao(Long idQuestao);
+    List<AlternativaEntity> findByQuestao_IdQuestao(Integer idQuestao);
 }

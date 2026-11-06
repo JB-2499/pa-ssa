@@ -32,7 +32,7 @@ public class Resposta {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_questao", nullable = false)
-    private Questao questao;
+    private QuestaoEntity questao;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_tentativa")

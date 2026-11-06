@@ -33,7 +33,7 @@ public class Tentativa {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_prova")
-    private Prova prova;
+    private ProvaEntity prova;
 
     @NotNull
     @Column(name = "iniciada_em", nullable = false)

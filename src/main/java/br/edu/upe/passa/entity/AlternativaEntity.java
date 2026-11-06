@@ -15,7 +15,7 @@ public class AlternativaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAlternativa;
+    private Integer idAlternativa;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_questao", nullable = false)

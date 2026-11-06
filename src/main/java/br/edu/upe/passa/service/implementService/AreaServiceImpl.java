@@ -26,8 +26,8 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     @Transactional(readOnly = true)
-    public AreaEntity buscarPorId(Long id) {
-        return areaRepository.findById(id)
+    public AreaEntity buscarPorId(Integer id) {
+        return areaRepository.findById(idArea)
                 .orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,

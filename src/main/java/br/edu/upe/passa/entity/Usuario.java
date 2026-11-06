@@ -33,6 +33,10 @@ public class Usuario {
     @Column(length = 50, unique = true, nullable = false)
     private String email;
 
+    @NotBlank
+    @Column(name = "senha_hash", length = 255, nullable = false)
+    private String senhaHash;
+
     @NotNull
     @Column(nullable = false)
     private Boolean verificado;

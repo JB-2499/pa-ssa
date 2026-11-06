@@ -1,6 +1,6 @@
 package br.edu.upe.passa.service;
 
-import br.edu.upe.passa.entity.Area;
+import br.edu.upe.passa.entity.AreaEntity;
 import br.edu.upe.passa.entity.Atividade;
 import br.edu.upe.passa.entity.Usuario;
 import br.edu.upe.passa.repository.AreaRepository;

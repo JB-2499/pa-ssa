@@ -16,7 +16,7 @@ public class TopicoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idTopico;
+    private Integer idTopico;
 
     @Column(nullable = false, length = 80)
     private String nome;

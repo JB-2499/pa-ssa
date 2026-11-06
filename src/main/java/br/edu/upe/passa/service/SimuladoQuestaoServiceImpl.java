@@ -1,6 +1,6 @@
 package br.edu.upe.passa.service;
 
-import br.edu.upe.passa.entity.Questao;
+import br.edu.upe.passa.entity.QuestaoEntity;
 import br.edu.upe.passa.entity.Simulado;
 import br.edu.upe.passa.entity.SimuladoQuestao;
 import br.edu.upe.passa.entity.SimuladoQuestaoId;
@@ -30,7 +30,7 @@ public class SimuladoQuestaoServiceImpl implements SimuladoQuestaoService {
 
         Simulado simulado = simuladoRepository.findById(simuladoId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Simulado não encontrado"));
-        Questao questao = questaoRepository.findById(questaoId)
+        QuestaoEntity questao = questaoRepository.findById(questaoId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Questão não encontrada"));
 
         SimuladoQuestaoId id = new SimuladoQuestaoId(simuladoId, questaoId);

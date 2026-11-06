@@ -32,7 +32,7 @@ public class Meta {
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_area", nullable = false)
-    private Area area;
+    private AreaEntity area;
 
     @NotNull
     @Min(1)

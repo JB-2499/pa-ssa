@@ -27,7 +27,7 @@ public class SimuladoQuestao {
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("questaoId")
     @JoinColumn(name = "id_questao")
-    private Questao questao;
+    private QuestaoEntity questao;
 
     @NotNull
     @Min(1)

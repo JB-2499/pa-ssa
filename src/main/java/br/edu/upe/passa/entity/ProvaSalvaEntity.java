@@ -20,7 +20,7 @@ public class ProvaSalvaEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idUsuario")
     @JoinColumn(name = "id_usuario")
-    private UsuarioEntity usuario;
+    private Usuario usuario;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("idProva")

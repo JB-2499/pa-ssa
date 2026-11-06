@@ -8,13 +8,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface QuestaoRepository extends JpaRepository<QuestaoEntity, Long> {
+public interface QuestaoRepository extends JpaRepository<QuestaoEntity, Integer> {
 
     List<QuestaoEntity> findByProva_Ano(Integer ano);
 
-    List<QuestaoEntity> findByTopico_IdTopico(Long idTopico);
+    List<QuestaoEntity> findByTopico_IdTopico(Integer idTopico);
 
-    List<QuestaoEntity> findByTopico_Disciplina_IdDisciplina(Long idDisciplina);
+    List<QuestaoEntity> findByTopico_Disciplina_IdDisciplina(Integer idDisciplina);
 
     List<QuestaoEntity> findByProva_Serie(Serie serie);
 

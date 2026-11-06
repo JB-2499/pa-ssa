@@ -30,7 +30,7 @@ public class Atividade {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_area")
-    private Area area;
+    private AreaEntity area;
 
     @NotNull
     @Column(name = "ocorrida_em", nullable = false)

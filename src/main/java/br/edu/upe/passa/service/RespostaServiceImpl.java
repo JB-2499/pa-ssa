@@ -1,6 +1,6 @@
 package br.edu.upe.passa.service;
 
-import br.edu.upe.passa.entity.Questao;
+import br.edu.upe.passa.entity.QuestaoEntity;
 import br.edu.upe.passa.entity.Resposta;
 import br.edu.upe.passa.entity.Tentativa;
 import br.edu.upe.passa.entity.Usuario;
@@ -38,7 +38,7 @@ public class RespostaServiceImpl implements RespostaService {
 
         Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado"));
-        Questao questao = questaoRepository.findById(questaoId)
+        QuestaoEntity questao = questaoRepository.findById(questaoId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Questão não encontrada"));
 
         Tentativa tentativa = null;

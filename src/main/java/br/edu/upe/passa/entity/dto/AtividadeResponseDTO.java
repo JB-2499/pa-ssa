@@ -15,7 +15,7 @@ public record AtividadeResponseDTO(
         return new AtividadeResponseDTO(
                 atividade.getId(),
                 atividade.getUsuario().getId(),
-                atividade.getArea() != null ? atividade.getArea().getId() : null,
+                atividade.getArea() != null ? atividade.getArea().getIdArea() : null,
                 atividade.getTipo(),
                 atividade.getOcorridaEm()
         );

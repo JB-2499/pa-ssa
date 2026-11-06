@@ -1,6 +1,6 @@
 package br.edu.upe.passa.service;
 
-import br.edu.upe.passa.entity.Prova;
+import br.edu.upe.passa.entity.ProvaEntity;
 import br.edu.upe.passa.entity.Simulado;
 import br.edu.upe.passa.entity.Tentativa;
 import br.edu.upe.passa.entity.Usuario;

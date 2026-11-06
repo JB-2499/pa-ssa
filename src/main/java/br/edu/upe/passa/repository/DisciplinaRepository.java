@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface DisciplinaRepository extends JpaRepository<DisciplinaEntity, Long> {
+public interface DisciplinaRepository extends JpaRepository<DisciplinaEntity, Integer> {
 
-    List<DisciplinaEntity> findByArea_IdArea(Long idArea);
+    List<DisciplinaEntity> findByArea_IdArea(Integer idArea);
 }

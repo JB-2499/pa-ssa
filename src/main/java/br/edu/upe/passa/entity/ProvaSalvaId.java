@@ -15,7 +15,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 public class ProvaSalvaId implements Serializable {
 
-    private Long idUsuario;
+    private Integer idUsuario;
 
-    private Long idProva;
+    private Integer idProva;
 }

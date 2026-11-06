@@ -16,7 +16,7 @@ public class QuestaoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idQuestao;
+    private Integer idQuestao;
 
     @Column(nullable = false)
     private Integer numero;

@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.UsuarioRequestDTO;
-import br.edu.upe.passa.dto.UsuarioResponseDTO;
+import br.edu.upe.passa.entity.dto.UsuarioRequestDTO;
+import br.edu.upe.passa.entity.dto.UsuarioResponseDTO;
 import br.edu.upe.passa.entity.Usuario;
 import br.edu.upe.passa.service.UsuarioService;
 import jakarta.validation.Valid;
