@@ -52,7 +52,7 @@ public class RespostaServiceImpl implements RespostaService {
             if (tentativa.getFinalizadaEm() != null) {
                 throw new ResponseStatusException(HttpStatus.CONFLICT, "Esta tentativa já foi finalizada");
             }
-            if (respostaRepository.existsByTentativaIdAndQuestaoId(tentativaId, questaoId)) {
+            if (respostaRepository.existsByTentativaIdAndQuestao_IdQuestao(tentativaId, questaoId)) {
                 throw new ResponseStatusException(HttpStatus.CONFLICT,
                         "Esta questão já foi respondida nesta tentativa");
             }

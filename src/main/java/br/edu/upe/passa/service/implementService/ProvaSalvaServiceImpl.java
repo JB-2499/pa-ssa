@@ -33,8 +33,7 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
     @Transactional
     public ProvaSalvaEntity salvar(Integer idUsuario, Integer idProva) {
 
-        if (provaSalvaRepository
-                .existsByUsuario_IdUsuarioAndProva_IdProva(idUsuario, idProva)) {
+        if (provaSalvaRepository.existsByUsuarioIdAndProva_IdProva(idUsuario, idProva)) {
 
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,
@@ -79,7 +78,7 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
             );
         }
 
-        return provaSalvaRepository.findByUsuario_IdUsuario(idUsuario);
+        return provaSalvaRepository.findByUsuarioId(idUsuario);
     }
 
     @Override

@@ -11,5 +11,5 @@ public interface RespostaRepository extends JpaRepository<Resposta, Integer> {
 
     List<Resposta> findByTentativaId(Integer tentativaId);
 
-    boolean existsByTentativaIdAndQuestaoId(Integer tentativaId, Integer questaoId);
+    boolean existsByTentativaIdAndQuestao_IdQuestao(Integer tentativaId, Integer questaoId);
 }

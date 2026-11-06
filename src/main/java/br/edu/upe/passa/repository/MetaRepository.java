@@ -9,5 +9,5 @@ public interface MetaRepository extends JpaRepository<Meta, Integer> {
 
     List<Meta> findByUsuarioId(Integer usuarioId);
 
-    boolean existsByUsuarioIdAndAreaId(Integer usuarioId, Integer areaId);
+    boolean existsByUsuarioIdAndArea_IdArea(Integer usuarioId, Integer areaId);
 }

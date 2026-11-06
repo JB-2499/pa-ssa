@@ -33,7 +33,7 @@ public class MetaServiceImpl implements MetaService {
         AreaEntity area = areaRepository.findById(areaId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Área não encontrada"));
 
-        if (metaRepository.existsByUsuarioIdAndAreaId(usuarioId, areaId)) {
+        if (metaRepository.existsByUsuarioIdAndArea_IdArea(usuarioId, areaId)) {
             throw new ResponseStatusException(HttpStatus.CONFLICT,
                     "O usuário já possui uma meta para esta área");
         }
