@@ -36,7 +36,7 @@ public class AtividadeServiceImpl implements AtividadeService {
         Usuario usuario = usuarioRepository.findById(usuarioId)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado"));
 
-        Area area = null;
+        AreaEntity area = null;
         if (areaId != null) {
             area = areaRepository.findById(areaId)
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Área não encontrada"));

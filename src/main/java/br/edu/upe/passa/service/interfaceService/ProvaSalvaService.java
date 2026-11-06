@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface ProvaSalvaService {
 
-    ProvaSalvaEntity salvar(Long idUsuario, Long idProva);
+    ProvaSalvaEntity salvar(Integer idUsuario, Integer idProva);
 
-    List<ProvaSalvaEntity> listarPorUsuario(Long idUsuario);
+    List<ProvaSalvaEntity> listarPorUsuario(Integer idUsuario);
 
-    void remover(Long idUsuario, Long idProva);
+    void remover(Integer idUsuario, Integer idProva);
 }

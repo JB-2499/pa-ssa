@@ -25,7 +25,7 @@ public class AreaController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AreaEntity> buscarPorId(@PathVariable Long id) {
+    public ResponseEntity<AreaEntity> buscarPorId(@PathVariable Integer id) {
         return ResponseEntity.ok(areaService.buscarPorId(id));
     }
 
@@ -39,14 +39,14 @@ public class AreaController {
 
     @PutMapping("/{id}")
     public ResponseEntity<AreaEntity> atualizar(
-            @PathVariable Long id,
+            @PathVariable Integer id,
             @RequestBody AreaEntity area) {
 
         return ResponseEntity.ok(areaService.atualizar(id, area));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+    public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 
         areaService.excluir(id);
 

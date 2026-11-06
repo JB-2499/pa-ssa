@@ -25,7 +25,7 @@ public class TopicoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<TopicoEntity> buscarPorId(
-            @PathVariable Long id) {
+            @PathVariable Integer id) {
 
         return ResponseEntity.ok(topicoService.buscarPorId(id));
     }
@@ -40,7 +40,7 @@ public class TopicoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<TopicoEntity> atualizar(
-            @PathVariable Long id,
+            @PathVariable Integer id,
             @RequestBody TopicoEntity topico) {
 
         return ResponseEntity.ok(
@@ -49,7 +49,7 @@ public class TopicoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+    public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 
         topicoService.excluir(id);
 

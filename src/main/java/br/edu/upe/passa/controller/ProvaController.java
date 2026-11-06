@@ -25,7 +25,7 @@ public class ProvaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<ProvaEntity> buscarPorId(
-            @PathVariable Long id) {
+            @PathVariable Integer id) {
 
         return ResponseEntity.ok(provaService.buscarPorId(id));
     }
@@ -39,7 +39,7 @@ public class ProvaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+    public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 
         provaService.excluir(id);
 

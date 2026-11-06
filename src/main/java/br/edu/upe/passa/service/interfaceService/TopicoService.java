@@ -7,11 +7,11 @@ public interface TopicoService {
 
     List<TopicoEntity> listarTodos();
 
-    TopicoEntity buscarPorId(Long id);
+    TopicoEntity buscarPorId(Integer id);
 
     TopicoEntity salvar(TopicoEntity topico);
 
-    TopicoEntity atualizar(Long id, TopicoEntity topico);
+    TopicoEntity atualizar(Integer id, TopicoEntity topico);
 
-    void excluir(Long id);
+    void excluir(Integer id);
 }

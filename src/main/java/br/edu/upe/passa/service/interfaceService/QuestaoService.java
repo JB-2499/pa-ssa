@@ -7,11 +7,11 @@ public interface QuestaoService {
 
     List<QuestaoEntity> listarTodas();
 
-    QuestaoEntity buscarPorId(Long id);
+    QuestaoEntity buscarPorId(Integer id);
 
     QuestaoEntity salvar(QuestaoEntity questao);
 
-    QuestaoEntity atualizar(Long id, QuestaoEntity questao);
+    QuestaoEntity atualizar(Integer id, QuestaoEntity questao);
 
-    void excluir(Long id);
+    void excluir(Integer id);
 }

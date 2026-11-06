@@ -7,11 +7,11 @@ public interface AreaService {
 
     List<AreaEntity> listarTodas();
 
-    AreaEntity buscarPorId(Long id);
+    AreaEntity buscarPorId(Integer id);
 
     AreaEntity salvar(AreaEntity area);
 
-    AreaEntity atualizar(Long id, AreaEntity area);
+    AreaEntity atualizar(Integer id, AreaEntity area);
 
-    void excluir(Long id);
+    void excluir(Integer id);
 }

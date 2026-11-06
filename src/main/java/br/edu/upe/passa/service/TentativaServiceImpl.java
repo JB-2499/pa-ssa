@@ -49,7 +49,7 @@ public class TentativaServiceImpl implements TentativaService {
             }
             tentativa.setSimulado(simulado);
         } else {
-            Prova prova = provaRepository.findById(provaId)
+            ProvaEntity prova = provaRepository.findById(provaId)
                     .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Prova não encontrada"));
             tentativa.setProva(prova);
         }

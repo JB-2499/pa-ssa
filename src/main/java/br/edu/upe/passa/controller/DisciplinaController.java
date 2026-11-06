@@ -25,7 +25,7 @@ public class DisciplinaController {
 
     @GetMapping("/{id}")
     public ResponseEntity<DisciplinaEntity> buscarPorId(
-            @PathVariable Long id) {
+            @PathVariable Integer id) {
 
         return ResponseEntity.ok(disciplinaService.buscarPorId(id));
     }
@@ -40,7 +40,7 @@ public class DisciplinaController {
 
     @PutMapping("/{id}")
     public ResponseEntity<DisciplinaEntity> atualizar(
-            @PathVariable Long id,
+            @PathVariable Integer id,
             @RequestBody DisciplinaEntity disciplina) {
 
         return ResponseEntity.ok(
@@ -49,7 +49,7 @@ public class DisciplinaController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> excluir(@PathVariable Long id) {
+    public ResponseEntity<Void> excluir(@PathVariable Integer id) {
 
         disciplinaService.excluir(id);
 

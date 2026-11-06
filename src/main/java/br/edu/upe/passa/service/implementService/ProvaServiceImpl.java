@@ -28,7 +28,7 @@ public class ProvaServiceImpl implements ProvaService {
 
     @Override
     @Transactional(readOnly = true)
-    public ProvaEntity buscarPorId(Long id) {
+    public ProvaEntity buscarPorId(Integer id) {
         return provaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,
@@ -52,7 +52,7 @@ public class ProvaServiceImpl implements ProvaService {
 
     @Override
     @Transactional
-    public void excluir(Long id) {
+    public void excluir(Integer id) {
         ProvaEntity prova = buscarPorId(id);
         provaRepository.delete(prova);
     }

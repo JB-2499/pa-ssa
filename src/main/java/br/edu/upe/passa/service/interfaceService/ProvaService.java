@@ -7,9 +7,9 @@ public interface ProvaService {
 
     List<ProvaEntity> listarTodas();
 
-    ProvaEntity buscarPorId(Long id);
+    ProvaEntity buscarPorId(Integer id);
 
     ProvaEntity salvar(ProvaEntity prova);
 
-    void excluir(Long id);
+    void excluir(Integer id);
 }

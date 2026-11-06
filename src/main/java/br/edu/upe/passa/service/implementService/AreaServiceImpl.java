@@ -24,7 +24,7 @@ public class AreaServiceImpl implements AreaService {
     }
 
     @Override
-    public AreaEntity buscarPorId(Long id) {
+    public AreaEntity buscarPorId(Integer id) {
         return areaRepository.findById(id).orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,
@@ -42,7 +42,7 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     @Transactional
-    public AreaEntity atualizar(Long id, AreaEntity area) {
+    public AreaEntity atualizar(Integer id, AreaEntity area) {
 
         AreaEntity existente = buscarPorId(id);
 
@@ -53,7 +53,7 @@ public class AreaServiceImpl implements AreaService {
 
     @Override
     @Transactional
-    public void excluir(Long id) {
+    public void excluir(Integer id) {
         AreaEntity area = buscarPorId(id);
         areaRepository.delete(area);
     }

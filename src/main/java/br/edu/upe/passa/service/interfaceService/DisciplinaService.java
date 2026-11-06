@@ -7,11 +7,11 @@ public interface DisciplinaService {
 
     List<DisciplinaEntity> listarTodas();
 
-    DisciplinaEntity buscarPorId(Long id);
+    DisciplinaEntity buscarPorId(Integer id);
 
     DisciplinaEntity salvar(DisciplinaEntity disciplina);
 
-    DisciplinaEntity atualizar(Long id, DisciplinaEntity disciplina);
+    DisciplinaEntity atualizar(Integer id, DisciplinaEntity disciplina);
 
-    void excluir(Long id);
+    void excluir(Integer id);
 }

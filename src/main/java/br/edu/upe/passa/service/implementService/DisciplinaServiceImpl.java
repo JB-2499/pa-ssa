@@ -26,7 +26,7 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 
     @Override
     @Transactional(readOnly = true)
-    public DisciplinaEntity buscarPorId(Long id) {
+    public DisciplinaEntity buscarPorId(Integer id) {
         return disciplinaRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,
@@ -50,7 +50,7 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 
     @Override
     @Transactional
-    public DisciplinaEntity atualizar(Long id, DisciplinaEntity disciplina) {
+    public DisciplinaEntity atualizar(Integer id, DisciplinaEntity disciplina) {
 
         DisciplinaEntity existente = buscarPorId(id);
 
@@ -62,7 +62,7 @@ public class DisciplinaServiceImpl implements DisciplinaService {
 
     @Override
     @Transactional
-    public void excluir(Long id) {
+    public void excluir(Integer id) {
         DisciplinaEntity disciplina = buscarPorId(id);
         disciplinaRepository.delete(disciplina);
     }

@@ -27,7 +27,7 @@ public class QuestaoServiceImpl implements QuestaoService {
 
     @Override
     @Transactional(readOnly = true)
-    public QuestaoEntity buscarPorId(Long id) {
+    public QuestaoEntity buscarPorId(Integer id) {
         return questaoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,
@@ -63,7 +63,7 @@ public class QuestaoServiceImpl implements QuestaoService {
 
     @Override
     @Transactional
-    public QuestaoEntity atualizar(Long id, QuestaoEntity questao) {
+    public QuestaoEntity atualizar(Integer id, QuestaoEntity questao) {
 
         QuestaoEntity existente = buscarPorId(id);
 
@@ -79,7 +79,7 @@ public class QuestaoServiceImpl implements QuestaoService {
 
     @Override
     @Transactional
-    public void excluir(Long id) {
+    public void excluir(Integer id) {
         QuestaoEntity questao = buscarPorId(id);
         questaoRepository.delete(questao);
     }

@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
 import br.edu.upe.passa.entity.ProvaSalvaEntity;
-import br.edu.upe.passa.service.interfaces.ProvaSalvaService;
+import br.edu.upe.passa.service.interfaceService.ProvaSalvaService;
 
 import lombok.RequiredArgsConstructor;
 
@@ -20,8 +20,8 @@ public class ProvaSalvaController {
 
     @PostMapping("/{idUsuario}/{idProva}")
     public ResponseEntity<ProvaSalvaEntity> salvar(
-            @PathVariable Long idUsuario,
-            @PathVariable Long idProva) {
+            @PathVariable Integer idUsuario,
+            @PathVariable Integer idProva) {
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(provaSalvaService.salvar(idUsuario, idProva));
@@ -29,7 +29,7 @@ public class ProvaSalvaController {
 
     @GetMapping("/usuario/{idUsuario}")
     public ResponseEntity<List<ProvaSalvaEntity>> listarPorUsuario(
-            @PathVariable Long idUsuario) {
+            @PathVariable Integer idUsuario) {
 
         return ResponseEntity.ok(
                 provaSalvaService.listarPorUsuario(idUsuario)
@@ -38,8 +38,8 @@ public class ProvaSalvaController {
 
     @DeleteMapping("/{idUsuario}/{idProva}")
     public ResponseEntity<Void> remover(
-            @PathVariable Long idUsuario,
-            @PathVariable Long idProva) {
+            @PathVariable Integer idUsuario,
+            @PathVariable Integer idProva) {
 
         provaSalvaService.remover(idUsuario, idProva);
 

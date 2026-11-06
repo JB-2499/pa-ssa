@@ -3,11 +3,11 @@ package br.edu.upe.passa.service.implementService;
 import br.edu.upe.passa.entity.ProvaSalvaEntity;
 import br.edu.upe.passa.entity.ProvaSalvaId;
 import br.edu.upe.passa.entity.ProvaEntity;
-import br.edu.upe.passa.entity.UsuarioEntity;
+import br.edu.upe.passa.entity.Usuario;
 
 import br.edu.upe.passa.repository.ProvaSalvaRepository;
 import br.edu.upe.passa.repository.ProvaRepository;
-import br.edu.upe.passa.repository.usuarioRepository;
+import br.edu.upe.passa.repository.UsuarioRepository;
 
 import br.edu.upe.passa.service.interfaceService.ProvaSalvaService;
 
@@ -27,11 +27,11 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
 
     private final ProvaSalvaRepository provaSalvaRepository;
     private final ProvaRepository provaRepository;
-    private final usuarioRepository UsuarioRepository;
+    private final UsuarioRepository UsuarioRepository;
 
     @Override
     @Transactional
-    public ProvaSalvaEntity salvar(Long idUsuario, Long idProva) {
+    public ProvaSalvaEntity salvar(Integer idUsuario, Integer idProva) {
 
         if (provaSalvaRepository
                 .existsByUsuario_IdUsuarioAndProva_IdProva(idUsuario, idProva)) {
@@ -42,7 +42,7 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
             );
         }
 
-        UsuarioEntity usuario = usuarioRepository.findById(idUsuario)
+        Usuario usuario = UsuarioRepository.findById(idUsuario)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,
                         "Usuário não encontrado"
@@ -70,9 +70,9 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<ProvaSalvaEntity> listarPorUsuario(Long idUsuario) {
+    public List<ProvaSalvaEntity> listarPorUsuario(Integer idUsuario) {
 
-        if (!usuarioRepository.existsById(idUsuario)) {
+        if (!UsuarioRepository.existsById(idUsuario)) {
             throw new ResponseStatusException(
                     HttpStatus.NOT_FOUND,
                     "Usuário não encontrado"
@@ -84,7 +84,7 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
 
     @Override
     @Transactional
-    public void remover(Long idUsuario, Long idProva) {
+    public void remover(Integer idUsuario, Integer idProva) {
 
         ProvaSalvaId id = new ProvaSalvaId();
         id.setIdUsuario(idUsuario);

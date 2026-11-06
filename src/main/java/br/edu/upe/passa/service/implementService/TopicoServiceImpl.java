@@ -27,7 +27,7 @@ public class TopicoServiceImpl implements TopicoService {
 
     @Override
     @Transactional(readOnly = true)
-    public TopicoEntity buscarPorId(Long id) {
+    public TopicoEntity buscarPorId(Integer id) {
         return topicoRepository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND,
@@ -51,7 +51,7 @@ public class TopicoServiceImpl implements TopicoService {
 
     @Override
     @Transactional
-    public TopicoEntity atualizar(Long id, TopicoEntity topico) {
+    public TopicoEntity atualizar(Integer id, TopicoEntity topico) {
 
         TopicoEntity existente = buscarPorId(id);
 
@@ -63,7 +63,7 @@ public class TopicoServiceImpl implements TopicoService {
 
     @Override
     @Transactional
-    public void excluir(Long id) {
+    public void excluir(Integer id) {
         TopicoEntity topico = buscarPorId(id);
         topicoRepository.delete(topico);
     }
