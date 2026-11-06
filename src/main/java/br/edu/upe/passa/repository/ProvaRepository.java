@@ -11,8 +11,6 @@ import java.util.List;
 public interface ProvaRepository extends JpaRepository<ProvaEntity, Long> {
 
     List<ProvaEntity> findByAno(Integer ano);
-
     List<ProvaEntity> findBySerie(Serie serie);
-
     List<ProvaEntity> findByAnoAndSerie(Integer ano, Serie serie);
 }

@@ -11,14 +11,8 @@ import java.util.List;
 public interface QuestaoRepository extends JpaRepository<QuestaoEntity, Long> {
 
     List<QuestaoEntity> findByProva_Ano(Integer ano);
-
     List<QuestaoEntity> findByTopico_IdTopico(Long idTopico);
-
     List<QuestaoEntity> findByTopico_Disciplina_IdDisciplina(Long idDisciplina);
-
     List<QuestaoEntity> findByProva_Serie(Serie serie);
-
-    List<QuestaoEntity> findByProva_AnoAndProva_Serie(
-            Integer ano, Serie serie
-    );
+    List<QuestaoEntity> findByProva_AnoAndProva_Serie(Integer ano, Serie serie);
 }

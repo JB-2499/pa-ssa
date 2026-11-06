@@ -11,7 +11,6 @@ import java.util.List;
 public interface ProvaSalvaRepository extends JpaRepository<ProvaSalvaEntity, ProvaSalvaId> {
 
     List<ProvaSalvaEntity> findByUsuario_IdUsuario(Long idUsuario);
-
     boolean existsByUsuario_IdUsuarioAndProva_IdProva(
             Long idUsuario, Long idProva
     );

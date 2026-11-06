@@ -24,15 +24,13 @@ public class QuestaoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<QuestaoEntity> buscarPorId(
-            @PathVariable Long id) {
+    public ResponseEntity<QuestaoEntity> buscarPorId(@PathVariable Long id) {
 
         return ResponseEntity.ok(questaoService.buscarPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<QuestaoEntity> salvar(
-            @RequestBody QuestaoEntity questao) {
+    public ResponseEntity<QuestaoEntity> salvar(@RequestBody QuestaoEntity questao) {
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(questaoService.salvar(questao));
@@ -43,16 +41,13 @@ public class QuestaoController {
             @PathVariable Long id,
             @RequestBody QuestaoEntity questao) {
 
-        return ResponseEntity.ok(
-                questaoService.atualizar(id, questao)
-        );
+        return ResponseEntity.ok(questaoService.atualizar(id, questao));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable Long id) {
 
         questaoService.excluir(id);
-
         return ResponseEntity.noContent().build();
     }
 }

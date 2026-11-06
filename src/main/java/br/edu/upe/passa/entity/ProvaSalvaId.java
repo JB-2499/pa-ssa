@@ -14,8 +14,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class ProvaSalvaId implements Serializable {
-
     private Long idUsuario;
-
     private Long idProva;
 }

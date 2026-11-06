@@ -6,10 +6,7 @@ import java.util.List;
 public interface ProvaService {
 
     List<ProvaEntity> listarTodas();
-
     ProvaEntity buscarPorId(Long id);
-
     ProvaEntity salvar(ProvaEntity prova);
-
     void excluir(Long id);
 }

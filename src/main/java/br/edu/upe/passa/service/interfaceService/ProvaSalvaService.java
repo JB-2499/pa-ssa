@@ -6,8 +6,6 @@ import java.util.List;
 public interface ProvaSalvaService {
 
     ProvaSalvaEntity salvar(Long idUsuario, Long idProva);
-
     List<ProvaSalvaEntity> listarPorUsuario(Long idUsuario);
-
     void remover(Long idUsuario, Long idProva);
 }

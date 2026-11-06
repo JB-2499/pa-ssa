@@ -18,10 +18,8 @@ public class AreaEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idArea;
-
     @Column(nullable = false, unique = true)
     private String nome;
-
     @OneToMany(mappedBy = "area")
     private List<DisciplinaEntity> disciplinas = new ArrayList<>();
 }
