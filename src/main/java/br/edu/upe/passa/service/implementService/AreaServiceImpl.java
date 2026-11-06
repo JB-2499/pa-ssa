@@ -19,19 +19,16 @@ public class AreaServiceImpl implements AreaService {
     private final AreaRepository areaRepository;
 
     @Override
-    @Transactional(readOnly = true)
     public List<AreaEntity> listarTodas() {
         return areaRepository.findAll();
     }
 
     @Override
-    @Transactional(readOnly = true)
-    public AreaEntity buscarPorId(Integer id) {
-        return areaRepository.findById(idArea)
-                .orElseThrow(() ->
+    public AreaEntity buscarPorId(Long id) {
+        return areaRepository.findById(id).orElseThrow(() ->
                         new ResponseStatusException(
                                 HttpStatus.NOT_FOUND,
-                                "Área não encontrada"
+                                "não encontrada"
                         )
                 );
     }
@@ -39,13 +36,6 @@ public class AreaServiceImpl implements AreaService {
     @Override
     @Transactional
     public AreaEntity salvar(AreaEntity area) {
-
-        if (areaRepository.existsByNome(area.getNome())) {
-            throw new ResponseStatusException(
-                    HttpStatus.CONFLICT,
-                    "Área já cadastrada"
-            );
-        }
 
         return areaRepository.save(area);
     }
