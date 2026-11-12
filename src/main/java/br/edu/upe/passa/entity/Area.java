@@ -17,7 +17,8 @@ public class Area {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idArea;
+    @Column(name = "id_area")
+    private Integer id;
 
     @Column(nullable = false, unique = true)
     private String nome;
