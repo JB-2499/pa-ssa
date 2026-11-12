@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface DisciplinaRepository extends JpaRepository<Disciplina, Integer> {
 
-    List<Disciplina> findByArea_IdArea(Integer idArea);
+    List<Disciplina> findByArea_Id(Integer id);
 }
