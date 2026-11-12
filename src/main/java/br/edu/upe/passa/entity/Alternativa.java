@@ -14,7 +14,8 @@ public class Alternativa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idAlternativa;
+    @Column(name = "id_alternativa")
+    private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_questao", nullable = false)

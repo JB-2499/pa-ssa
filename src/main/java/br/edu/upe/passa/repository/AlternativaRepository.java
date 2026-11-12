@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 public interface AlternativaRepository extends JpaRepository<Alternativa, Integer> {
 
-    List<Alternativa> findByQuestao_IdQuestao(Integer idQuestao);
+    List<Alternativa> findByQuestao_Id(Integer id);
+
+    boolean existsByIdAndLetra(Integer id, String letra);
 }
