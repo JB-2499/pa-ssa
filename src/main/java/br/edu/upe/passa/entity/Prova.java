@@ -18,7 +18,7 @@ public class Prova {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idProva;
+    private Integer id;
 
     @Column(nullable = false)
     private Integer ano;

@@ -32,7 +32,7 @@ public class ProvaSalvaServiceImpl implements ProvaSalvaService {
     @Transactional
     public ProvaSalva salvar(Integer idUsuario, Integer idProva) {
 
-        if (provaSalvaRepository.existsByUsuarioIdAndProva_IdProva(idUsuario, idProva)) {
+        if (provaSalvaRepository.existsByUsuarioIdAndProva_Id(idUsuario, idProva)) {
 
             throw new ResponseStatusException(
                     HttpStatus.CONFLICT,

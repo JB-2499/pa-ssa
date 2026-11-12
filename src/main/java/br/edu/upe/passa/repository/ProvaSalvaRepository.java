@@ -12,5 +12,5 @@ public interface ProvaSalvaRepository extends JpaRepository<ProvaSalva, ProvaSal
 
     List<ProvaSalva> findByUsuarioId(Integer idUsuario);
 
-    boolean existsByUsuarioIdAndProva_IdProva(Integer idUsuario, Integer idProva);
+    boolean existsByUsuarioIdAndProva_Id(Integer idUsuario, Integer idProva);
 }
