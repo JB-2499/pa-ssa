@@ -15,7 +15,7 @@ public record MetaResponseDTO(
         return new MetaResponseDTO(
                 meta.getId(),
                 meta.getUsuario().getId(),
-                meta.getArea().getIdArea(),
+                meta.getArea().getId(),
                 meta.getTaxaDesejada(),
                 meta.getDataAlvo()
         );
