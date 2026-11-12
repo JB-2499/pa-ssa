@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.TokenVerificacaoRequestDTO;
-import br.edu.upe.passa.dto.TokenVerificacaoResponseDTO;
+import br.edu.upe.passa.entity.dto.TokenVerificacaoRequestDTO;
+import br.edu.upe.passa.entity.dto.TokenVerificacaoResponseDTO;
 import br.edu.upe.passa.entity.TokenVerificacao;
 import br.edu.upe.passa.service.TokenVerificacaoService;
 import jakarta.validation.Valid;

@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.MetaRequestDTO;
-import br.edu.upe.passa.dto.MetaResponseDTO;
+import br.edu.upe.passa.entity.dto.MetaRequestDTO;
+import br.edu.upe.passa.entity.dto.MetaResponseDTO;
 import br.edu.upe.passa.entity.Meta;
 import br.edu.upe.passa.service.MetaService;
 import jakarta.validation.Valid;

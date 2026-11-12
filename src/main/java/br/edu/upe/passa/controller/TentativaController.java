@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.TentativaRequestDTO;
-import br.edu.upe.passa.dto.TentativaResponseDTO;
+import br.edu.upe.passa.entity.dto.TentativaRequestDTO;
+import br.edu.upe.passa.entity.dto.TentativaResponseDTO;
 import br.edu.upe.passa.entity.Tentativa;
 import br.edu.upe.passa.service.TentativaService;
 import jakarta.validation.Valid;

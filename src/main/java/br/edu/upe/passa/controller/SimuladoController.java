@@ -1,7 +1,7 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.SimuladoRequestDTO;
-import br.edu.upe.passa.dto.SimuladoResponseDTO;
+import br.edu.upe.passa.entity.dto.SimuladoRequestDTO;
+import br.edu.upe.passa.entity.dto.SimuladoResponseDTO;
 import br.edu.upe.passa.entity.Simulado;
 import br.edu.upe.passa.service.SimuladoService;
 import jakarta.validation.Valid;

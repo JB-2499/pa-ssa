@@ -1,4 +1,4 @@
-package br.edu.upe.passa.dto;
+package br.edu.upe.passa.entity.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

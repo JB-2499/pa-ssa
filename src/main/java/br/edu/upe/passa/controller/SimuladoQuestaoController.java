@@ -1,8 +1,8 @@
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.dto.SimuladoQuestaoOrdemDTO;
-import br.edu.upe.passa.dto.SimuladoQuestaoRequestDTO;
-import br.edu.upe.passa.dto.SimuladoQuestaoResponseDTO;
+import br.edu.upe.passa.entity.dto.SimuladoQuestaoOrdemDTO;
+import br.edu.upe.passa.entity.dto.SimuladoQuestaoRequestDTO;
+import br.edu.upe.passa.entity.dto.SimuladoQuestaoResponseDTO;
 import br.edu.upe.passa.service.SimuladoQuestaoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
