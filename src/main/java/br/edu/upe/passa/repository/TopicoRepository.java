@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface TopicoRepository extends JpaRepository<Topico, Integer> {
 
-    List<Topico> findByDisciplina_IdDisciplina(Integer idDisciplina);
+    List<Topico> findByDisciplina_Id(Integer id);
 }

@@ -16,7 +16,8 @@ public class Topico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idTopico;
+    @Column(name = "id_topico")
+    private Integer id;
 
     @Column(nullable = false, length = 80)
     private String nome;
