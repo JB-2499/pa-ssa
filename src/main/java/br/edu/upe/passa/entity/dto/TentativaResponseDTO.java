@@ -17,7 +17,7 @@ public record TentativaResponseDTO(
                 tentativa.getId(),
                 tentativa.getUsuario().getId(),
                 tentativa.getSimulado() != null ? tentativa.getSimulado().getId() : null,
-                tentativa.getProva() != null ? tentativa.getProva().getIdProva() : null,
+                tentativa.getProva() != null ? tentativa.getProva().getId() : null,
                 tentativa.getIniciadaEm(),
                 tentativa.getFinalizadaEm()
         );

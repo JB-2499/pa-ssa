@@ -53,7 +53,7 @@ public class RespostaServiceImpl implements RespostaService {
             if (tentativa.getFinalizadaEm() != null) {
                 throw new ResponseStatusException(HttpStatus.CONFLICT, "Esta tentativa já foi finalizada");
             }
-            if (respostaRepository.existsByTentativaIdAndQuestao_IdQuestao(tentativaId, questaoId)) {
+            if (respostaRepository.existsByTentativaIdAndQuestao_Id(tentativaId, questaoId)) {
                 throw new ResponseStatusException(HttpStatus.CONFLICT,
                         "Esta questão já foi respondida nesta tentativa");
             }
@@ -81,7 +81,7 @@ public class RespostaServiceImpl implements RespostaService {
         if (!usuarioRepository.existsById(usuarioId)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuário não encontrado");
         }
-        return respostaRepository.findByUsuarioIdOrderByRespondidaEmDesc(usuarioId);
+        return respostaRepository.findByIdOrderByRespondidaEmDesc(usuarioId);
     }
 
     @Override
