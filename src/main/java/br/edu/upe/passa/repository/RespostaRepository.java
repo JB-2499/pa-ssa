@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface RespostaRepository extends JpaRepository<Resposta, Integer> {
 
-    List<Resposta> findByUsuarioIdOrderByRespondidaEmDesc(Integer usuarioId);
+    List<Resposta> findByIdOrderByRespondidaEmDesc(Integer id);
 
     List<Resposta> findByTentativaId(Integer tentativaId);
 
-    boolean existsByTentativaIdAndQuestao_IdQuestao(Integer tentativaId, Integer questaoId);
+    boolean existsByTentativaIdAndQuestao_Id(Integer tentativaId, Integer questaoId);
 }

@@ -16,7 +16,7 @@ public record RespostaResponseDTO(
         return new RespostaResponseDTO(
                 resposta.getId(),
                 resposta.getUsuario().getId(),
-                resposta.getQuestao().getIdQuestao(),
+                resposta.getQuestao().getId(),
                 resposta.getTentativa() != null ? resposta.getTentativa().getId() : null,
                 resposta.getLetraMarcada(),
                 resposta.getRespondidaEm()
