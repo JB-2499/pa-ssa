@@ -12,9 +12,9 @@ public interface QuestaoRepository extends JpaRepository<Questao, Integer> {
 
     List<Questao> findByProva_Ano(Integer ano);
 
-    List<Questao> findByTopico_IdTopico(Integer idTopico);
+    List<Questao> findByTopico_Id(Integer id);
 
-    List<Questao> findByTopico_Disciplina_IdDisciplina(Integer idDisciplina);
+    List<Questao> findByTopico_Disciplina_Id(Integer id);
 
     List<Questao> findByProva_Serie(Serie serie);
 

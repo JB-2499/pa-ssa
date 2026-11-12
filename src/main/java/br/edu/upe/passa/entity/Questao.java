@@ -16,7 +16,8 @@ public class Questao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idQuestao;
+    @Column(name = "id_questao")
+    private Integer id;
 
     @Column(nullable = false)
     private Integer numero;
