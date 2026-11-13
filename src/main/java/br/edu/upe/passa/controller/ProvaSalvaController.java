@@ -1,13 +1,8 @@
-//Corrigir colocando os DTO
-
-
 package br.edu.upe.passa.controller;
 
-import br.edu.upe.passa.entity.ProvaSalva;
+import br.edu.upe.passa.entity.dto.ProvaSalvaResponseDTO;
 import br.edu.upe.passa.service.ProvaSalvaService;
-
 import lombok.RequiredArgsConstructor;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,21 +17,24 @@ public class ProvaSalvaController {
     private final ProvaSalvaService provaSalvaService;
 
     @PostMapping("/{idUsuario}/{idProva}")
-    public ResponseEntity<ProvaSalva> salvar(
+    public ResponseEntity<ProvaSalvaResponseDTO> salvar(
             @PathVariable Integer idUsuario,
             @PathVariable Integer idProva) {
 
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(provaSalvaService.salvar(idUsuario, idProva));
+                .body(ProvaSalvaResponseDTO.fromEntity(
+                        provaSalvaService.salvar(idUsuario, idProva)
+                ));
     }
 
     @GetMapping("/usuario/{idUsuario}")
-    public ResponseEntity<List<ProvaSalva>> listarPorUsuario(
+    public ResponseEntity<List<ProvaSalvaResponseDTO>> listarPorUsuario(
             @PathVariable Integer idUsuario) {
 
-        return ResponseEntity.ok(
-                provaSalvaService.listarPorUsuario(idUsuario)
-        );
+        List<ProvaSalvaResponseDTO> provasSalvas = provaSalvaService.listarPorUsuario(idUsuario).stream()
+                .map(ProvaSalvaResponseDTO::fromEntity)
+                .toList();
+        return ResponseEntity.ok(provasSalvas);
     }
 
     @DeleteMapping("/{idUsuario}/{idProva}")
@@ -45,7 +43,6 @@ public class ProvaSalvaController {
             @PathVariable Integer idProva) {
 
         provaSalvaService.remover(idUsuario, idProva);
-
         return ResponseEntity.noContent().build();
     }
 }
